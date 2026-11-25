@@ -1,2 +1,180 @@
-# sadiaoishi.github.io
-My Personal Portfolio Website.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mst. Sadia Zaman Oishi  | CSE Student Portfolio</title>
+<meta name="description" content="Portfolio of Mst. Sadia Zaman Oishi, Computer Science and Engineering student at IUBAT.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d1146;--paper:#f4f0ff;--violet:#6c3df4;--pink:#ff3d8b;--orange:#ff9a2e;--teal:#18c9b0;--sky:#3aa8ff;--mute:#5b5280}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Outfit',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 6vw;background:rgba(244,240,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #e1d9ff}
+nav b{font-weight:800;font-size:1.2rem;color:var(--violet)}
+nav div a{margin-left:20px;text-decoration:none;font-weight:600}
+nav div a:hover{color:var(--pink)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:70px 6vw;background:linear-gradient(135deg,var(--violet),var(--pink) 60%,var(--red));color:#fff}
+.role{font-weight:600;font-size:1.1rem;opacity:.95;margin-bottom:8px}
+.hero h1{font-size:clamp(2.2rem,5.5vw,3.9rem);font-weight:800;line-height:1.1}
+.hero p{max-width:50ch;margin:18px 0 28px;font-size:1.1rem}
+.btn{display:inline-block;padding:12px 26px;border-radius:40px;font-weight:600;text-decoration:none;margin:0 10px 10px 0}
+.btn.main{background:#fff;color:var(--violet)}
+.btn.alt{border:2px solid #fff;color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.photo{justify-self:center;width:min(320px,70vw);aspect-ratio:1;border-radius:50%;border:8px solid #fff;overflow:hidden;background:var(--ink);box-shadow:14px 14px 0 var(--teal);display:grid;place-items:center;font-size:5rem;font-weight:800;color:#fff}
+.photo img{width:100%;height:100%;object-fit:cover}
+section{padding:70px 6vw}
+.wrap{max-width:1000px;margin:0 auto}
+h2{font-size:2.1rem;font-weight:800;margin-bottom:8px}
+.sub{color:var(--mute);margin-bottom:28px}
+.about p{margin-bottom:14px;font-size:1.1rem;max-width:70ch}
+.facts{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.facts span{padding:8px 18px;border-radius:30px;font-weight:600;color:#fff}
+.edu{background:#fff}
+.edu .box{border-left:8px solid var(--violet);padding:6px 0 6px 22px}
+.edu h3{font-size:1.4rem}
+.edu .where{color:var(--pink);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{padding:26px;border-radius:24px;color:#fff}
+.card h3{font-size:1.25rem;margin-bottom:10px}
+.card .tags{display:flex;flex-wrap:wrap;gap:8px}
+.card .tags span{background:rgba(255,255,255,.25);padding:4px 14px;border-radius:20px;font-weight:600;font-size:.95rem}
+.c1{background:var(--violet)}.c2{background:var(--pink)}.c3{background:var(--teal);color:var(--ink)}.c3 .tags span{background:rgba(29,17,70,.12)}
+.c4{background:var(--orange);color:var(--ink)}.c4 .tags span{background:rgba(29,17,70,.12)}
+.proj{background:#fff}
+.proj .card{background:var(--paper);color:var(--ink);border:3px solid var(--ink);box-shadow:8px 8px 0 var(--sky);display:flex;flex-direction:column}
+.proj .card:nth-child(2){box-shadow:8px 8px 0 var(--pink)}
+.proj .card p{flex:1;margin-bottom:14px}
+.proj .card a{font-weight:600;color:var(--violet)}
+.proj .card .btns{display:flex;flex-wrap:wrap;gap:10px}
+.proj .card .btns a{background:var(--violet);color:#fff;padding:8px 18px;border-radius:30px;text-decoration:none}
+.proj .card .btns a:hover{background:var(--pink)}
+.contact{background:linear-gradient(135deg,var(--teal),var(--sky));color:var(--ink)}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.links a{background:var(--ink);color:#fff;padding:12px 24px;border-radius:40px;font-weight:600;text-decoration:none}
+.links a:hover{background:var(--violet)}
+footer{padding:22px;text-align:center;font-size:.9rem;color:var(--mute)}
+a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}nav div a{margin-left:12px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <b>Oishi</b>
+  <div><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="role">CSE Student at IUBAT</div>
+    <h1>Mst. Sadia Zaman Oishi</h1>
+    <p>I build small projects with code and keep learning every day. Currently focused on programming fundamentals and web development.</p>
+    <a class="btn main" href="#contact">Contact me</a>
+    <a class="btn alt" href="#projects">View projects</a>
+  </div>
+  <div class="photo">
+    <img src="profile.jpg" alt="Photo of Mst. Sadia Zaman Oishi" onerror="this.remove();this.parentNode.textContent='SN'">
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <p class="sub">A short introduction</p>
+    <p>I'm a Computer Science and Engineering student at International University of Business Agriculture and Technology (IUBAT). I enjoy solving problems, learning how software works, and sharing what I build.</p>
+    <p>I'm learning the C programming language and exploring mobile app development, game development, AI and cybersecurity to find the field I want to specialize in.</p>
+    <div class="facts">
+      <span style="background:var(--violet)">CSE Student</span>
+      <span style="background:var(--green)">IUBAT</span>
+      <span style="background:var(--teal);color:var(--ink)">C Programming</span>
+      <span style="background:var(--red);color:var(--ink)">Web Basics</span>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="edu">
+  <div class="wrap">
+    <h2>Education</h2>
+    <p class="sub">Where I'm studying</p>
+    <div class="box">
+      <h3>Computer Science and Engineering (CSE)</h3>
+      <div class="where">International University of Business Agriculture and Technology (IUBAT)</div>
+      <p>Studying programming, problem solving and the fundamentals of computer science.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="sub">What I'm working with</p>
+    <div class="grid">
+      <div class="card c1"><h3>Programming</h3><div class="tags"><span>C</span></div></div>
+      <div class="card c2"><h3>Web</h3><div class="tags"><span>HTML</span><span>CSS</span></div></div>
+      <div class="card c3"><h3>Tools</h3><div class="tags"><span>Git</span><span>GitHub</span><span>GitHub Pages</span></div></div>
+     
+  </div>
+</section>
+
+<section id="projects" class="proj">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="sub">Things I've built so far</p>
+      <div class="card">
+        <h3>Personal portfolio website</h3>
+        <p>This responsive website, built with HTML and CSS and hosted for free on GitHub Pages.</p>
+        <a href="https://github.com/sadiaoishi/sadiaoishi.github.io" target="_blank" rel="noopener">View source on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>C practice programs</h3>
+        <p>Small C programs such as arithmetic operations and percentage calculation while learning the language.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="sub" style="color:var(--ink)">Feel free to reach out. I'd love to hear from you.</p>
+    <div class="links" id="links"></div>
+  </div>
+</section>
+
+<footer>© 2026 Mst. Sadia Zaman Oishi. Built with HTML and CSS by Shahariar Ahmed Nayem</footer>
+
+<script>
+/* Fill in your details below. Leave a value empty ("") to hide that button. */
+const CONTACT = {
+  email: "",
+  phone: "",      // example: "+8801XXXXXXXXX"
+  linkedin: "",
+  facebook: "",   // example: "https://www.facebook.com/your-profile"
+  cv: ""          // example: "cv.pdf" (upload the file to the repo)
+};
+const items = [
+  [CONTACT.email, "Email", "mailto:" + CONTACT.email],
+  [CONTACT.phone, "Call", "tel:" + CONTACT.phone],
+  [CONTACT.linkedin, "LinkedIn", CONTACT.linkedin],
+  [CONTACT.facebook, "Facebook", CONTACT.facebook],
+  [CONTACT.cv, "Download CV", CONTACT.cv],
+  ["x", "GitHub", "https://github.com/sadiaoishi"]
+];
+const box = document.getElementById("links");
+items.forEach(([v, label, href]) => {
+  if (!v) return;
+  const a = document.createElement("a");
+  a.textContent = label; a.href = href;
+  if (href.startsWith("http")) { a.target = "_blank"; a.rel = "noopener"; }
+  box.appendChild(a);
+});
+</script>
+</body>
+</html>
