@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -176,5 +176,4 @@ items.forEach(([v, label, href]) => {
   box.appendChild(a);
 });
 </script>
-</body>
-</html>
+
